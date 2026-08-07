@@ -7,8 +7,8 @@ import qualified Data.Set as S
 
 main :: IO()
 main = do
-	fileString <- readFile "input.txt" 
-	--fileString <- readFile "example.txt"
+	--fileString <- readFile "input.txt" 
+	fileString <- readFile "example.txt"
 	let lineStr = init(splitOn "\n" fileString)
 
 	let machines = map parseMachine lineStr
@@ -76,7 +76,9 @@ sumSet buttons joltage = ss 0 buttons joltage
 --execSeqJolt sequence jolt = foldl' (\st button -> sumSet button st) jolt sequence
 
 
-
+-----------------------------------------------------
+--OLD------------------------------------------
+--
 p2 :: [Machine] -> Int
 p2 xs = sum (map solve2 xs)
 
